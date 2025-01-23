@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBTECH SOLUTION</title>
+    <link rel="stylesheet" href="blogweb.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript">
+        function showcontent(contentid){
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.style.display  = "none");
+            
+            const startpage =  document.getElementById("start_page");
+            startpage.style.display = "none";
+            const selectedcontent = document.getElementById(contentid);
+            selectedcontent.style.display='block';
+
+            
+        }
+        
+        function showDetails(blogid) {
+            const blog = document.querySelectorAll('.box');
+            blog.forEach(blog => blog.style.display  = "none");
+            
+            const selectedportfolio = document.getElementById(blogid);
+            selectedportfolio.style.display="block";
+
+            const back_button1 = document.getElementById("back");
+            back_button1.style.display = "block";
+        }
+
+        function go_back(blogid){
+            const selectedportfolio = document.getElementById(blogid);
+            selectedportfolio.style.display="none";
+
+            const blog = document.querySelectorAll('.box');
+            blog.forEach(blog => blog.style.display  = "block");
+
+        }
+        
+    </script>
+</head>
+<body><div class="main">
+    <h1>WEBTECH</h1>
+</div>
+    
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#" onclick="showcontent('content1')">Home</a></li>
+            <li><a href="#" onclick="showcontent('content2')">About Us</a></li>
+            <li><a href="#" onclick="showcontent('content3')">Portfolio/resume</a></li>
+            <li><a href="#" onclick="showcontent('content4')">Contact us</a></li>
+            
+        </ul>
+    </nav>
+    <div id="start_page" class="start_page">
+        <h2>WELCOME</h2>
+        we are dedicated to delivering innovative technology solutions that drive success.
+        Explore our services and discover how we can help bring your digital vision to life.<br>
+        <b>To view our portfolio click on the images</b>
+    </div>
+    <div id="content1" class="content">
+        <div class="home_tiles">
+        <div class="home_feature">
+            <div class="R">
+                <h1>Welcome to our website</h1>
+                <p>welcome to webtech solutions ,where technology meets vision. we specialise in delivering cutting-edge solution that drive 
+                    growth, streamline process and empower businesses to succeed in the digital age. whether you are a start up or an established 
+                    enterprise , we are here to help you navigate the ever-evolving landscape with confidence and agility.
+                </p>
+                <h2>why partner with webtech solution</h2>
+                <ul>
+                    <li style="font-size: x-large; text-align:center;">innovative solution</li>
+                    we leverage the latest in technology to build solutions that keep you ahead of the competition
+                    <li style="font-size: x-large; text-align:center;">expert team</li>
+                    our team of experienced developers, engineers and tech strategists are committed to delivering top-notch results.
+                    <li style="font-size: x-large; text-align:center;">client-centric approach</li>
+                    your needs are our priority.We work closely with you to understand your goals and customize our solutions accordingly
+                </ul>
+                <h2>empowering your digital journey</h2>
+                <p>whether you are looking to modernize your IT infrastructure , develop an app or improve cybersecurity, we are here to help
+                    .our goal is to be more than just a tech provider-we are a trusted partner dedicated  to your success
+                </p>
+                <br>
+            </div>
+            <div class="L">
+                <h2>lets build the future together</h2>
+                <p>explore our services or get in touch to discuss how we can collaborate on your next big project. At webtech solutions
+                    , we turn visions into reality-one innovation at a time.
+                </p>
+                <h2>our services</h2>
+                <ul>
+                    <li style="font-size: x-large; text-align:center;">custom software development</li>
+                    tailored software to meet your unique business needs, ensuring scalability and reliability.
+                    <li style="font-size: x-large; text-align:center;">cloud solutions</li>
+                    seemles cloud integration and migration services to enhance flexibility, security and efficiency
+                    <li style="font-size: x-large; text-align:center;">data analytics and AI</li>
+                    transform your data into actionable insights with our advanced analytics and AI-driven solutions
+                    <li style="font-size: x-large; text-align:center;">cyber security</li>
+                    safeguard your business with our comprehensive security solutions, designed to protect your digital assets
+                </ul>
+            </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="content2" class="content">
+        <div class="con">
+        <h1><span class="lar">W</span>HO WE ARE</h1>
+        <p>As webtech solutions , we are team of passionate tech experts committed to driving innovation and providing 
+            cutting-edge solutions for business of all sizes. Founded in the year 2023, We specialize in web development, digital transformation
+            and custom software solutions that empower our clients to thrive in digital edge.
+        </p>
+        <img src="JD.jpg"> <img src="Bt.jpg"> <img src="tj.jpg"> <img src="di.jpg"> <img src="ai.webp">
+        <h2><span class="lar">O</span>UR MISSION</h2>
+        our mission is simple:
+        <ul>
+            <li>To deliver world-class technology solutions that help businesses grow</li>
+            <li>streamline operations</li>
+            <li>stay ahead of the curve</li>
+        </ul>
+        we combine creativity, technical expertise and industry knowledge to build robust and scalable web applications that
+        are tailored to meet your unique needs.
+    </div>
+    </div>
+    <div id="content3" class="content">
+        <div class="container">
+            
+            <div class="box">
+                
+                <a href="#" onclick="showDetails('blog1')" ><img src="e.jpg"></a>
+                <br>
+                <name><b>BOB</b></name>
+                :software engineer and a project manager, coding is his canvas and he is the artist, also 
+                best in organization and management.
+            </div>
+            <div class="box" >
+                
+                <a href="#" onclick="showDetails('blog2')" ><img src="f.jpg"></a>
+                <br>
+                <name><b>ELIZABETH</b></name>
+                :a graphic and web designer who loves creating stunning visuals
+            </div>
+            <div class="box" >
+                
+                <a href="#" onclick="showDetails('blog3')" ><img src="k.jpg"></a>
+                <br>
+                <name>SIMON</name>
+                :Database specialist ,speaks sql fluently building the backbone of data driven decisions.
+            </div>
+            <div class="box" >
+                
+                <a href="#" onclick="showDetails('blog4')" ><img src="d.jpg"></a>
+                <br>
+                </a><name><b>BRIAN</b> </name>
+                :full stack developer from front-end flair to back-end brilliance.
+            </div>
+            <div class="box">
+                
+                <a href="#" onclick="showDetails('blog5')" ><img src="j.jpg"></a>
+                <br>
+                <name><b>JEFF</b></name>
+                :Data analyst, data is the new oil ,he is the refiner.
+
+            </div>
+            <div class="box">
+                
+                <a href="#" onclick="showDetails('blog6')" ><img src="Dj.jpg"></a>
+                <br>
+                <name><b>DAVID</b></name>
+                :a cybersecurity specialist ,guarding the digital realm one at a time.
+            </div> 
+            
+        </div>
+    </div>
+    <div id="blog1" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog1')"style=>Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="e.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>0111933103
+                    <br>
+                    <b>Email address:</b>
+                    bobmochama975@gmail.com
+                    <br>
+                    <b>Home Address:</b>619-0219 
+                    Kakamega
+                </p>
+                <h2>Skills</h2>
+                <p>Web systems designing <br> Coding and software engineering <br> communication and planning <br> Adaptability <br>leadership</p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili <br> Spanish <br> French </p>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>A creative problem solver who designs, develops, tests and maintains software
+                    applications. i use my knowledge in programming languages, engineering principles
+                    and problem-solving skills to build software solutions that meet user's needs.Am also
+                    result-oriented project team leader with 5 years experience covering project and product
+                    management including developing, implementing and supporting complex infrastructure systems.
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>Nairobi Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>Software solutions.</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>I became proficient in various programming languages like :(python,java,javascript
+                        ,c++) and frameworks like:(React, Angular, Django) to build robust applications.
+                        </li>
+                        <li>understanding fundamental data structures and algorithms that enhance my
+                            ability to write efficient and optimized codes.</li>
+                        <li>identifying, assessing and mitigating potential risks to the projects success</li> 
+                    </ul>
+                    <br>
+                    <b><i>Byte builders</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>Testing and Debugging: I acquired skills in writing unit tests, integration tests and 
+                            debugging code to ensure best software quality.</li>
+                        <li>Adaptability and continuous learning: The tech industry is constantly
+                            evolving, so i nee to stay updated with new technologies and trends.
+                        </li>
+                        <li>working with teams from departments to achieve common goals, communication and stake-holder management</li><br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        
+        </div>
+    </div>
+    <div id="blog2" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog2')">Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="f.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>0769844857
+                    <br>
+                    <b>Email address:</b>
+                    elizabeth902@gmail.com
+                    <br>
+                    <b>Home Address:</b>619-0219 
+                    Kakamega
+                </p>
+                <h2>Skills</h2>
+                <p>Web designing <br> Coding <br> Networking <br> Adaptability </p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili <br> Spanish <br> French </p><br><br>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>A knowledgeable and qualified web developer with a proven track record 
+                    of success in conducting comprehensive web designs, developing customized 
+                    web systems and providing professional and qroup web designs to those in need
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>Kyeni Girls High Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>Tech Solutions Inc.</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>I immersed in coding, debugging and building software solutions</li>
+                        <li>Responsible for defining product strategy, managing product development and
+                        ensuring customer satisfaction.</li>  
+                    </ul>
+                    <br>
+                    <b><i>Web Wizards</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>I focused on creating user-friendly and usually appealing websites.</li>
+                        <li>Analyze large datasets to extract insights and decision-making</li>
+                        <br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        
+        </div>
+    </div>
+    <div id="blog3" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog3')">Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="k.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>
+                    <br>
+                    <b>Email address:</b>
+                    simon30202@gmail.com
+                    <br>
+                    <b>Home Address:</b>619-0219 
+                    Kakamega
+                </p>
+                <h2>Skills</h2>
+                <p>sql proficiency<br> data security <br> Networking <br> database design and modelling<br>backup and recovery<br><script></script> </p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili  </p><br><br>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>A knowledgeable and qualified database developer with a proven track record 
+                    of success in conducting comprehensive database designs, developing customized 
+                    database systems and providing professional designs to those in need.
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>St joseph High Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>Teradata</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>performed integration of data warehousing and big data analytics</li>
+                        <li>collaborated with engineers and data analytics in building collaborative platforms</li>
+                    </ul>
+                    <br>
+                    <b><i>cloudera</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>collaborated with data engineers focussing on big data solutions.</li>
+                        <li>performed data warehousing and backup</li>
+                        <br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="blog4" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog4')">Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="d.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>0718364879
+                    <br>
+                    <b>Email address:</b>
+                    jeff718364879@gmail.com
+                    <br>
+                    <b>Home Address:</b>619-0219 
+                    Kakamega
+                </p>
+                <h2>Skills</h2>
+                <p>full stack developer <br> Networking <br> Adaptability </p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili <br></p>
+                <br>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>Hands on experience designing, developing and implementing applications and solutions using a range 
+                    of technologies and programming languages seeking to leverage broad development experience and 
+                    hands on technical expertise in challenging role as a full stack-developer
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>Musingu High Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>code craft.</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>proficiency in HTML,CSS and javascript for creating user interfaces</li>
+                        <li>Experience with front-end frame-works like react, angular and vue.js for building complex
+                            web applications.</li>  
+                            <li>proficiency in python, java and mysql database for back-end</li>
+                    </ul>
+                    <br>
+                    <b><i>zendev</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>Ability to work on both the front-end and back-end of web applications.</li>
+                        <li>understanding of API design and development for communication between different software components</li><br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        
+        </div>
+    </div>
+    </div>
+    <div id="blog5" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog5')">Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="j.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>0763458971
+                    <br>
+                    <b>Email address:</b>
+                    brian405@gmail.com
+                    <br>
+                    <b>Home Address:</b>619-0219 
+                    Kakamega
+                </p>
+                <h2>Skills</h2>
+                <p>data analysis <br>data visualization and reporting  <br>data mining<br> Adaptability </p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili <br> </p>
+                <br>
+                <br>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>
+                    Am integral to the succes of a website , leveraging data to inform decisions ,optimize performance
+                    and enhance user experience.
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>Uzima High Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>Mailchimp.</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>Providing reports and analytics tools alongside email marketing services</li>
+                        <li>Tracking user engagement and website performance using various analytic tools.</li>  
+                    </ul>
+                    <br>
+                    <b><i>Amplitude.com</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>Help businesses track user behavior and improve data quality.</li>
+                        <li>integrating analytics with customer data to enhance decision-making processes.</li><br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        
+        </div>
+    </div>
+<div id="blog6" class="portfolio">
+        <div id="back" class="back_button"> <a href="#" onclick="go_back('blog6')">Back</a> </div>
+        <div class="container2">
+            <div class="column left">
+                <img src="Dj.jpg">
+                <h2>Contacts</h2>
+                <p> 
+                    <b>Phone number:</b>0115484231
+                    <br>
+                    <b>Email address:</b>
+                    davidjaoko1@gmail.com
+                    <br>
+                    <b>Home Address:</b>5188-0200
+                    Nairobi
+                </p>
+                <h2>Skills</h2>
+                <p>Ethical hacking <br> Coding <br> Networking <br> Adaptability<br>Deep linux OS operations </p>
+                <h2>Languages</h2>
+                <p>English <br> Kiswahili </p>
+                <br>
+                <br>
+            </div>  
+            <div class="column right">
+                <!---->
+                <h1>ABOUT ME</h1>
+                <p>Highly motivated and detail-oriented Entry level cybersecurity professional with a passion
+                    for protecting sensitive data and mitigating cyber threats.Skilled in implementing 
+                    security controls to ensure compliance with industry standards.
+                </p>
+                <h1>EDUCATION</h1>
+                <P>
+                    <b>High school</b><br>Aquinas High Shool<br> 2013-2017<br>
+                    <b>IT Degree</b>
+                    <br>
+                    Masinde Muliro university of Science and Technology
+                    <br>
+                    2017-2021
+                </P>
+                <h1>EXPERIENCE</h1>
+                <p>
+                    <b><i>Zenith sec</i></b>
+                    <br>
+                    <i>2021-2022</i><br>
+                    <ul style="list-style-type: square;">
+                        <li>Some professionals engagement in ethical hacking, testing systems for vulnerabilities
+                            to improve security.
+                        </li>
+                    </ul>
+                    <br>
+                    <b><i>Digifort</i></b>
+                    <br>
+                    <i>2022-2024</i>
+                    <ul style="list-style-type: square;">
+                        <li>dealing with data breaches and other security compromises.</li>
+                        <li>Effective collaboration with other team members, including developers, network engineers and 
+                            incident responders is crucial
+                        </li><br>
+                    </ul>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="content4" class="content" >
+        <div class="details">
+        <h1>Contact us</h1>
+        <i class='bx bxs-location-plus'></i><b>Address: </b>102 East 2nd street,Nairobi
+        <br>
+        <i class='bx bxs-phone'></i><b>Phone: </b>+254 769844857
+        <br>
+        <i class='bx bx-envelope' ></i><b>Email: </b>Webtech@gmail.com
+        <br>
+        <i class='bx bxl-telegram'></i><b>Website: </b>www.WebtechSolutions.com
+    </div>
+    </div>
+</body>
+</html>

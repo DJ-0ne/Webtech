@@ -8,13 +8,22 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript">
         function showcontent(contentid){
+            const portfoliocontent = document.querySelectorAll('.portfolio');
+            portfoliocontent.forEach(content => content.style.display  = "none");
+            
             const contents = document.querySelectorAll('.content');
             contents.forEach(content => content.style.display  = "none");
+
+            const back = document.querySelectorAll('.back');
+            back.forEach(back => back.style.display  = "none");
             
             const startpage =  document.getElementById("start_page");
             startpage.style.display = "none";
             const selectedcontent = document.getElementById(contentid);
             selectedcontent.style.display='block';
+
+            const blog = document.querySelectorAll('.box');
+            blog.forEach(blog => blog.style.display  = "block");
 
             
         }

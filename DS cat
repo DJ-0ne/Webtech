@@ -1,0 +1,147 @@
+This is the code for a binary search tree and all its operations with explanation:
+class Node {
+    int value;       
+    Node left;      
+    Node right;    
+
+  
+    public Node(int value) {
+        this.value = value;
+        left = null;
+        right = null;
+    }
+}
+
+class BinaryTree {
+
+    // Insert a node into the binary tree
+    public Node insert(Node root, int value) {
+        if (root == null) {
+            return new Node(value);  // If the tree is empty, create a new node
+        }
+        if (value < root.value) {
+            root.left = insert(root.left, value);
+        } else {
+            root.right = insert(root.right, value); 
+        }
+        return root;
+    }
+
+    // Inorder Traversal: Left -> Root -> Right
+    public void inorderTraversal(Node root) {
+        if (root != null) {
+            inorderTraversal(root.left);         
+            System.out.print(root.value + " ");  
+            inorderTraversal(root.right);        
+        }
+    }
+
+    // Preorder Traversal: Root -> Left -> Right
+    public void preorderTraversal(Node root) {
+        if (root != null) {
+            System.out.print(root.value + " "); 
+            preorderTraversal(root.left);       
+            preorderTraversal(root.right);     
+        }
+    }
+
+    // Postorder Traversal: Left -> Right -> Root
+    public void postorderTraversal(Node root) {
+        if (root != null) {
+            postorderTraversal(root.left);      
+            postorderTraversal(root.right);    
+            System.out.print(root.value + " ");
+        }
+    }
+
+    // Binary search
+    public boolean search(Node root, int value) {
+        if (root == null) {
+            return false;  
+        }
+        if (root.value == value) {
+            return true;   
+        }
+        if (value < root.value) {
+            return search(root.left, value); 
+        }
+        return search(root.right, value);   
+    }
+
+    // Delete a node from the binary tree
+    public Node delete(Node root, int value) {
+        if (root == null) {
+            return null; 
+        }
+
+        // Traverse the tree to find the node to delete
+        if (value < root.value) {
+            root.left = delete(root.left, value);  // Search in the left subtree
+        } else if (value > root.value) {
+            root.right = delete(root.right, value); // Search in the right subtree
+        } else {
+            // Node to be deleted found
+            if (root.left == null) {
+                return root.right;  
+            } else if (root.right == null) {
+                return root.left;   
+            }
+
+            // Case: Node with two children
+            Node successor = findMin(root.right);  // Find inorder successor
+            root.value = successor.value;          // Replace value with successor
+            root.right = delete(root.right, successor.value); // Delete successor
+        }
+        return root;
+    }
+
+    // Find the minimum value node in a subtree
+    private Node findMin(Node root) {
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a binary tree
+        BinaryTree tree = new BinaryTree();
+        Node root = null;
+
+        // Insert nodes into the binary tree
+        root = tree.insert(root, 10);
+        root = tree.insert(root, 5);
+        root = tree.insert(root, 15);
+        root = tree.insert(root, 3);
+        root = tree.insert(root, 7);
+        root = tree.insert(root, 12);
+        root = tree.insert(root, 18);
+
+        // Display the tree using different traversals
+        System.out.println("Inorder Traversal:");
+        tree.inorderTraversal(root);  // Output: 3 5 7 10 12 15 18
+
+        System.out.println("\nPreorder Traversal:");
+        tree.preorderTraversal(root); // Output: 10 5 3 7 15 12 18
+
+        System.out.println("\nPostorder Traversal:");
+        tree.postorderTraversal(root); // Output: 3 7 5 12 18 15 10
+
+        // Search for a specific value
+        System.out.println("\nSearch for value 7:");
+        System.out.println(tree.search(root, 7));  // Output: true
+
+        System.out.println("Search for value 20:");
+        System.out.println(tree.search(root, 20)); // Output: false
+
+        // Delete a node from the binary tree
+        System.out.println("\nDeleting node with value 5:");
+        root = tree.delete(root, 5);
+
+        // Display the tree after deletion
+        System.out.println("Inorder Traversal after deletion:");
+        tree.inorderTraversal(root);  // Output: 3 7 10 12 15 18
+    }
+}
